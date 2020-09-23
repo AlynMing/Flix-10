@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate { // steap 1: add in UITableViewDataSource, UITableViewDelegate after UIViewController
+class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate { // step 1: add in UITableViewDataSource, UITableViewDelegate after UIViewController
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -34,7 +34,11 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
 
             self.movies = dataDictionary["results"] as! [[String:Any]]
             
+            self.tableView.reloadData() // step 4
+            
+            
             print(dataDictionary)
+            
               // TODO: Get the array of movies
               // TODO: Store the movies in a property to use elsewhere
               // TODO: Reload your table view data
